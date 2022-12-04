@@ -1,0 +1,312 @@
+-- Instances:
+local before = game:GetService("Players").LocalPlayer.PlayerGui:WaitForChild("CurrencyUI").MainFrame.ChampionCoins.AmountLabel.Text
+local modee = 2
+
+
+local MoneyFarm = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local UIStroke = Instance.new("UIStroke")
+local Frame_2 = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local UIStroke_2 = Instance.new("UIStroke")
+local Frame_3 = Instance.new("TextLabel")
+local Frame_4 = Instance.new("ImageLabel")
+local Mode = Instance.new("TextLabel")
+local Toggle = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local UIStroke_3 = Instance.new("UIStroke")
+local CurrentStatus = Instance.new("TextLabel")
+local Status = Instance.new("TextLabel")
+local Earned = Instance.new("TextLabel")
+local CurrentEarned = Instance.new("TextLabel")
+local Note = Instance.new("TextLabel")
+local Performance = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local UIStroke_4 = Instance.new("UIStroke")
+local Speed = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local UIStroke_5 = Instance.new("UIStroke")
+local Mode_2 = Instance.new("TextLabel")
+local on = Instance.new("BoolValue")
+on.Name = "on"
+on.Parent = MoneyFarm
+
+
+--Properties:
+
+MoneyFarm.Name = "MoneyFarm"
+MoneyFarm.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+MoneyFarm.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = MoneyFarm
+Frame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Frame.Position = UDim2.new(0.174353272, 0, 0.210059434, 0)
+Frame.Size = UDim2.new(0, 300, 0, 350)
+
+UICorner.CornerRadius = UDim.new(0.150000006, 0)
+UICorner.Parent = Frame
+
+UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke.Color = Color3.fromRGB(256,256,256)
+UIStroke.Parent = Frame
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Frame_2.Size = UDim2.new(1, 0, 0.173350573, 0)
+
+UICorner_2.CornerRadius = UDim.new(0.0500000007, 0)
+UICorner_2.Parent = Frame_2
+
+UIStroke_2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_2.Color = Color3.fromRGB(256,256,256)
+UIStroke_2.Parent = Frame_2
+
+Frame_3.Name = "Frame"
+Frame_3.Parent = Frame_2
+Frame_3.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Frame_3.BackgroundTransparency = 1.000
+Frame_3.Position = UDim2.new(0.200484931, 0, 0.019862704, 0)
+Frame_3.Size = UDim2.new(0.799515069, 0, 0.980137229, 0)
+Frame_3.Font = Enum.Font.GothamBlack
+Frame_3.Text = "Money Farm"
+Frame_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Frame_3.TextScaled = true
+Frame_3.TextWrapped = true
+Frame_3.TextXAlignment = Enum.TextXAlignment.Left
+
+Frame_4.Name = "Frame"
+Frame_4.Parent = Frame_2
+Frame_4.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Frame_4.BackgroundTransparency = 1.000
+Frame_4.Position = UDim2.new(0, 0, 0.00680340221, 0)
+Frame_4.Size = UDim2.new(0.200484872, 0, 0.993196785, 0)
+Frame_4.Image = "rbxassetid://11735545255"
+Frame_4.ScaleType = Enum.ScaleType.Fit
+
+Mode.Name = "Mode"
+Mode.Parent = Frame
+Mode.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Mode.BackgroundTransparency = 1.000
+Mode.Position = UDim2.new(0, 0, 0.171428576, 0)
+Mode.Size = UDim2.new(0, 300, 0, 30)
+Mode.Font = Enum.Font.SourceSansBold
+Mode.Text = "Choose a mode:"
+Mode.TextColor3 = Color3.fromRGB(255, 255, 255)
+Mode.TextSize = 25.000
+Mode.TextWrapped = true
+
+Toggle.Name = "Toggle"
+Toggle.Parent = Frame
+Toggle.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Toggle.Position = UDim2.new(0.159999996, 0, 0.571428597, 0)
+Toggle.Size = UDim2.new(0, 200, 0, 50)
+Toggle.Font = Enum.Font.GothamBlack
+Toggle.Text = "TOGGLE"
+Toggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+Toggle.TextSize = 45.000
+Toggle.TextWrapped = true
+
+UICorner_3.CornerRadius = UDim.new(0.150000006, 0)
+UICorner_3.Parent = Toggle
+
+UIStroke_3.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_3.Color = Color3.fromRGB(256,256,256)
+UIStroke_3.Parent = Toggle
+
+CurrentStatus.Name = "CurrentStatus"
+CurrentStatus.Parent = Frame
+CurrentStatus.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CurrentStatus.BackgroundTransparency = 1.000
+CurrentStatus.Position = UDim2.new(0.0155150853, 0, 0.734960973, 0)
+CurrentStatus.Size = UDim2.new(0, 141, 0, 30)
+CurrentStatus.Font = Enum.Font.SourceSansBold
+CurrentStatus.Text = "Current Status:"
+CurrentStatus.TextColor3 = Color3.fromRGB(255, 255, 255)
+CurrentStatus.TextSize = 25.000
+CurrentStatus.TextWrapped = true
+CurrentStatus.TextXAlignment = Enum.TextXAlignment.Left
+
+Status.Name = "Status"
+Status.Parent = Frame
+Status.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Status.BackgroundTransparency = 1.000
+Status.Position = UDim2.new(0.51666671, 0, 0.734960973, 0)
+Status.Size = UDim2.new(0, 140, 0, 30)
+Status.Font = Enum.Font.SourceSansBold
+Status.Text = "Disabled"
+Status.TextColor3 = Color3.fromRGB(255, 255, 255)
+Status.TextSize = 25.000
+Status.TextWrapped = true
+
+Earned.Name = "Earned"
+Earned.Parent = Frame
+Earned.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Earned.BackgroundTransparency = 1.000
+Earned.Position = UDim2.new(0.51666671, 0, 0.820675254, 0)
+Earned.Size = UDim2.new(0, 140, 0, 30)
+Earned.Font = Enum.Font.SourceSansBold
+Earned.Text = "0"
+Earned.TextColor3 = Color3.fromRGB(255, 255, 255)
+Earned.TextSize = 25.000
+Earned.TextWrapped = true
+
+CurrentEarned.Name = "CurrentEarned"
+CurrentEarned.Parent = Frame
+CurrentEarned.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CurrentEarned.BackgroundTransparency = 1.000
+CurrentEarned.Position = UDim2.new(0.0155150853, 0, 0.820675254, 0)
+CurrentEarned.Size = UDim2.new(0, 141, 0, 30)
+CurrentEarned.Font = Enum.Font.SourceSansBold
+CurrentEarned.Text = "Money Made:"
+CurrentEarned.TextColor3 = Color3.fromRGB(255, 255, 255)
+CurrentEarned.TextSize = 25.000
+CurrentEarned.TextWrapped = true
+CurrentEarned.TextXAlignment = Enum.TextXAlignment.Left
+
+Note.Name = "Note"
+Note.Parent = Frame
+Note.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Note.BackgroundTransparency = 1.000
+Note.Position = UDim2.new(0.0799999237, 0, 0.907376528, 0)
+Note.Size = UDim2.new(0, 250, 0, 32)
+Note.Font = Enum.Font.SourceSansSemibold
+Note.Text = "This Script was made by LymthomHD"
+Note.TextColor3 = Color3.fromRGB(255, 255, 255)
+Note.TextScaled = true
+Note.TextSize = 25.000
+Note.TextWrapped = true
+
+Performance.Name = "Performance"
+Performance.Parent = Frame
+Performance.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Performance.Position = UDim2.new(0.0666666627, 0, 0.259168804, 0)
+Performance.Size = UDim2.new(0, 120, 0, 35)
+Performance.Font = Enum.Font.GothamBlack
+Performance.Text = " PERFORMANCE"
+Performance.TextColor3 = Color3.fromRGB(255, 255, 255)
+Performance.TextSize = 14.000
+Performance.TextWrapped = true
+
+UICorner_4.CornerRadius = UDim.new(0.150000006, 0)
+UICorner_4.Parent = Performance
+
+UIStroke_4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_4.Color = Color3.fromRGB(256,256,256)
+UIStroke_4.Parent = Performance
+
+Speed.Name = "Speed"
+Speed.Parent = Frame
+Speed.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Speed.Position = UDim2.new(0.531939209, 0, 0.259168804, 0)
+Speed.Size = UDim2.new(0, 120, 0, 35)
+Speed.Font = Enum.Font.GothamBlack
+Speed.Text = "SPEED (laggy)"
+Speed.TextColor3 = Color3.fromRGB(255, 255, 255)
+Speed.TextSize = 14.000
+Speed.TextWrapped = true
+
+UICorner_5.CornerRadius = UDim.new(0.150000006, 0)
+UICorner_5.Parent = Speed
+
+UIStroke_5.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_5.Color = Color3.fromRGB(256,256,256)
+UIStroke_5.Parent = Speed
+
+Mode_2.Name = "Mode"
+Mode_2.Parent = Frame
+Mode_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Mode_2.BackgroundTransparency = 1.000
+Mode_2.Position = UDim2.new(-1.01725263e-07, 0, 0.390701115, 0)
+Mode_2.Size = UDim2.new(0, 300, 0, 47)
+Mode_2.Font = Enum.Font.SourceSansBold
+Mode_2.Text = "Although Speed increases Profit alot, its recommended to use Performance instead."
+Mode_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Mode_2.TextScaled = true
+Mode_2.TextSize = 25.000
+Mode_2.TextWrapped = true
+
+Speed.MouseButton1Click:Connect(function()
+	modee = 1
+end)
+
+Performance.MouseButton1Click:Connect(function()
+	modee = 2
+end)
+
+Toggle.MouseButton1Click:Connect(function()
+	if on.Value == false then
+		on.Value = true
+		Status.Text = "Enabled"
+	elseif on.Value == true then
+		on.Value = false
+		Status.Text = "Disabled"
+	end
+end)
+
+on.Changed:Connect(function()
+	if on.Value == true then
+		while on.Value == true do
+			if modee == 2 then
+				for i,v in pairs(game.ReplicatedStorage.TaskReplication:GetDescendants()) do
+					if v.Name == "TaskCompleted" then
+						v:FireServer(true)
+					end
+					Earned.Text = game:GetService("Players").LocalPlayer.PlayerGui.CurrencyUI.MainFrame.ChampionCoins.AmountLabel.Text - before
+					task.wait()
+				end
+			elseif modee == 1 then
+				while on.Value == true do
+					for i,v in pairs(game.ReplicatedStorage.TaskReplication:GetDescendants()) do
+						if v.Name == "TaskCompleted" then
+							v:FireServer(true)
+						end
+
+					end
+					Earned.Text = game:GetService("Players").LocalPlayer.PlayerGui.CurrencyUI.MainFrame.ChampionCoins.AmountLabel.Text - before
+					task.wait()
+				end
+			end
+		end
+	end
+end)
+
+local UserInputService = game:GetService("UserInputService")
+
+local gui = Frame
+
+local dragging
+local dragInput
+local dragStart
+local startPos
+
+local function update(input)
+	local delta = input.Position - dragStart
+	gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+end
+
+gui.InputBegan:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+		dragging = true
+		dragStart = input.Position
+		startPos = gui.Position
+
+		input.Changed:Connect(function()
+			if input.UserInputState == Enum.UserInputState.End then
+				dragging = false
+			end
+		end)
+	end
+end)
+
+gui.InputChanged:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+		dragInput = input
+	end
+end)
+
+UserInputService.InputChanged:Connect(function(input)
+	if input == dragInput and dragging then
+		update(input)
+	end
+end)
