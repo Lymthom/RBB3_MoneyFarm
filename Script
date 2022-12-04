@@ -251,23 +251,23 @@ on.Changed:Connect(function()
 				for i, v in pairs(game.ReplicatedStorage.TaskReplication:GetChildren()) do
 					pcall(function()
 						v.TaskStarted:FireServer()
-                       				v.TaskCompleted:FireServer(true)
-                   			end)
+						v.TaskCompleted:FireServer(true)
+					end)
 					task.wait()
 				end
 			elseif modee == 1 then
 				while on.Value == true do
-					
-				for i, v in pairs(game.ReplicatedStorage.TaskReplication:GetChildren()) do
-					pcall(function()
-						v.TaskStarted:FireServer()
-                       				v.TaskCompleted:FireServer(true)
-                   			end)
-					
+
+					for i, v in pairs(game.ReplicatedStorage.TaskReplication:GetChildren()) do
+						pcall(function()
+							v.TaskStarted:FireServer()
+							v.TaskCompleted:FireServer(true)
+						end)
+					end
+					task.wait()
 				end
-				task.wait()
+				Earned.Text = game:GetService("Players").LocalPlayer.PlayerGui.CurrencyUI.MainFrame.ChampionCoins.AmountLabel.Text - before
 			end
-			Earned.Text = game:GetService("Players").LocalPlayer.PlayerGui.CurrencyUI.MainFrame.ChampionCoins.AmountLabel.Text - before
 		end
 	end
 end)
