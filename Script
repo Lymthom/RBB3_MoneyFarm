@@ -250,23 +250,24 @@ on.Changed:Connect(function()
 			if modee == 2 then
 				for i,v in pairs(game.ReplicatedStorage.TaskReplication:GetDescendants()) do
 					if v.Name == "TaskCompleted" then
+						v.TaskStarted:FireServer()
 						v:FireServer(true)
 					end
-					Earned.Text = game:GetService("Players").LocalPlayer.PlayerGui.CurrencyUI.MainFrame.ChampionCoins.AmountLabel.Text - before
 					task.wait()
 				end
 			elseif modee == 1 then
 				while on.Value == true do
 					for i,v in pairs(game.ReplicatedStorage.TaskReplication:GetDescendants()) do
 						if v.Name == "TaskCompleted" then
+							v.TaskStarted:FireServer()
 							v:FireServer(true)
 						end
 
 					end
-					Earned.Text = game:GetService("Players").LocalPlayer.PlayerGui.CurrencyUI.MainFrame.ChampionCoins.AmountLabel.Text - before
 					task.wait()
 				end
 			end
+			Earned.Text = game:GetService("Players").LocalPlayer.PlayerGui.CurrencyUI.MainFrame.ChampionCoins.AmountLabel.Text - before
 		end
 	end
 end)
